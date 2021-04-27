@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	
+<meta charset="utf-8">
+	
+<title>Random Number</title>
+	
+<script>
+
+	function randNum()
+	{
+		var num = Math.floor(Math.random() * 10) + 1 // grabs a random number and stores it
+		document.getElementById("Random").value = num; //displays random number
+	}
+
+</script>
+	
+</head>
+
+<body>
+	<h1>WDV221 Intro Javascript</h1>
+	<h2>Random Number Button</h2>
+	<p><input type = "button" value = "Random Number" onclick = "randNum()"></p>
+	<p><input type = "text" id = "Random"></p>
+</body>
+</html>

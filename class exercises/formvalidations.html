@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	
+	<script>
+		
+		function validationString()
+		{
+			let inputValue = document.querySelector("#inName").value.trim(); //value in text field
+			
+			if (inputValue == "" || inputValue == "null")
+			{
+				alert("invalid data");
+			}
+		}
+		
+		function validationNum()
+		{
+			/*on click grab the value of the phone input box
+			if !NaN() to validate number
+			&&
+			value.length != 10 
+			&&*/
+			//alert("inside");
+			let inputValue = document.querySelector("#inPhone").value;
+			
+			if (isNaN(inputValue) || inputValue.trim() == "")
+			{
+				alert("invalid");
+			}
+			else
+			{
+				alert("valid");	
+			}
+		}
+	
+		
+
+	</script>
+	
+</head>
+
+<body>
+	<h1>wdv221 Form Validation</h1>
+	<form>
+		<p>Name <input type = "text" name = "inName" id = "inName" required></p>
+		<span id = "error1"></span>
+		<input type = "button" value = "Enter" onClick = "validation()">
+		<input type = "reset" value = "Reset">
+	</form>
+	<form>
+		<p>Phone Number <input type = "text" name = "inPhone" id = "inPhone" placeholder = "5151231234"></p>
+		<span id = "error2"></span>
+		<input type = "button" value = "Enter" onClick = "validationNum()">
+		<input type = "reset" value = "Reset">
+		
+	</form>
+</body>
+</html>

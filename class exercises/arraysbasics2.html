@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Untitled Document</title>
+	
+	<script>
+	
+		const stateCodes = 
+			  [ 'AL', 'AK', 'AS', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FM', 'FL', 'GA', 'GU', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MH', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'MP', 'OH', 'OK', 'OR', 'PW', 'PA', 'PR', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VI', 'VA', 'WA', 'WV', 'WI', 'WY' ];
+		
+		function createStateCode()
+		{			
+			alert("fff");
+			for (let c = 0; c < stateCodes.length; c++)
+			{
+				//document.write("<option value = '" + stateCodes[c] + "'>" + stateCodes[c] + "</option>")
+			}
+		}
+
+	
+	</script>
+	
+</head>
+
+<body onload="createStateCode()">
+	
+	<h1>WDV221 Arrays</h1>
+	
+	
+	<form method="post" action="#">
+		<div>
+			<label> Select State: 
+				<select name="stateCode2" id = "stateCode2">
+					<option value ="">Please choose a State</option>
+				</select>
+			</label>
+		</div>
+		
+		<div>
+			<script>
+				for (let c = 0; c < stateCodes.length; c++)
+				{
+					document.write("<label><input type = 'radio' name = 'stateCode' value = '" + stateCodes[c] + "'>" + stateCodes[c] + "</label></br>")
+				}
+			</script>
+		</div>
+	</form>
+	
+	
+	
+</body>
+</html>

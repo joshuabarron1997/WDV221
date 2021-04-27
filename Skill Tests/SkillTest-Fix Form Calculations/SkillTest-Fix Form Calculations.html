@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV221 Intro Javascript - Skill Test Form Calculations</title>
+
+<script>
+
+	var totalSales = 0;						//initialize Total Sales
+
+	function processOrder() {
+		//alert("inside processOrder()");	
+		
+		//get information from form
+		var inProductName = document.getElementById("item_name").value;		//get Product name
+		var inPrice = document.getElementById("item_price").value;			//get price
+		var inQuantity = document.getElementById("item_quantity").value;	//get quantity
+		
+		//calculate Sale Price for the order
+		
+		if(  isNaN(parseFloat(inPrice))  ||  isNaN(parseFloat(inQuantity)) || inPrice < 0 || inQuantity < 0 )
+		{
+			alert("Bad input!");
+		}
+		else {
+		
+			var salePrice = inPrice * inQuantity;								//calculate the Sale Price
+			
+			var formattedSalePrice = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(salePrice)//dollarFormat(salePrice+"");				//turn number into currency format
+			document.getElementById("outSalePrice").innerHTML = formattedSalePrice;		//display Sale Price
+			
+
+			totalSales += salePrice;											//add current sale to total sales
+
+			var formattedTotalSales = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(totalSales)//dollarFormat(totalSales+"");				//turn number into currency format
+			document.getElementById("outTotalSales").innerHTML = formattedTotalSales;	//display Total Sales
+			
+			//Display the Name and Sale Price to the order list
+			var orderLine = inProductName + "  " + formattedSalePrice + "<br>";
+			document.getElementById("outDisplayOrder").innerHTML += orderLine;
+		}
+	}
+
+
+	function clearSale() {
+		//alert("inside clearSale()");	
+		document.getElementById("outSalePrice").innerHTML = "";			//clear Sale Price for new order	
+	}
+	
+	function clearOrder() {
+		//alert("inside clearOrder()");	
+		totalSales = "";
+		document.getElementById("outTotalSales").innerHTML = "";
+		document.getElementById("outDisplayOrder").innerHTML = "";
+	}
+
+
+</script>
+
+
+
+
+</head>
+
+<body>
+<h1>WDV221 Intro Javascript</h1>
+<h2>Skill Test - Fix Form</h2>
+<form id="form1" name="form1" method="post" action="">
+  <table width="452">
+     <tr>
+      <td width="168">Item Name:</td>
+      <td width="272"><input type="text" name="textfield" id="item_name" /></td>
+    </tr> 
+    <tr>
+      <td>Item Price:</td>
+      <td><input type="text" name="textfield" id="item_price" /></td>
+    </tr>
+    <tr>
+      <td>Number Purchased:</td>
+      <td><input type="text" name="textfield2" id="item_quantity" /></td>
+    </tr>
+    <tr>
+      <td>Sale Price: </td>
+      <td><span id="outSalePrice"></span></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Total Sales: </td>
+      <td><span id="outTotalSales"></span></td>
+    </tr>
+  </table>
+  <p>
+    <input type="button" name="button" id="button" value="Submit Order" onclick="processOrder()"/>
+    <input type="reset" name="button2" id="button2" value="Clear Sale" onclick="clearSale()" />
+    <input type="button" name="button3" id="button3" value="Clear Order" onclick="clearOrder()" />
+  </p>
+</form>
+<h2>Javascript Supplies - Invoice</h2>
+<p id="outDisplayOrder"></p>
+<p></p>
+<p></p>
+<p></p>
+<h3>Instructions:</h3>
+<p>Fix the form so that it will correctly process an order. There are multiple typos, mistakes and missing commands. </p>
+</body>
+</html>

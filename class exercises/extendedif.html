@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Untitled Document</title>
+	
+	<script>
+	
+		function testNum(testValue)
+		{
+			if (!isNaN(testValue))
+			{
+				alert("Valid");
+			}
+			else
+			{
+				alert("Invalid");
+			}
+		}
+	
+	</script>
+	
+</head>
+
+<body>
+	<p><input type = "radio" name = "group" id = "btn1" value = "Red" onClick = "testNum()">Red</p>
+	<p><input type = "radio" name = "group" id = "btn2" value = "four" onClick = "testNum()">four</p>
+	<p><input type = "radio" name = "group" id = "btn3" value = "7" onClick = "testNum()">7</p>
+	<p><input type = "radio" name = "group" id = "btn4"  value = "6ish" onClick = "testNum()">6ish</p>
+	<p><input type = "radio" name = "group" id = "btn5" value = "ok" onClick = "testNum()">ok</p>
+</body>
+</html>

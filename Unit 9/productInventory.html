@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Untitled Document</title>
+	
+	<script>
+		let products = ['pen', 'paper', 'pencil'];
+		let inventory = [0, 0, 0]
+		
+		function addProduct() //adds a stock to the product
+		{
+			s = document.querySelector("#text1").value;
+			for (let c = 0; c < products.length; c++)
+			{
+				if (s == products[c])
+				{
+					inventory[c]++;
+					document.querySelector("#output").innerHTML = "You stock the product, there are now " + inventory[c] + " " + products[c] + "s in stock";
+					return;
+				}
+				else
+				{
+					document.querySelector("#output").innerHTML = "That product does not exist" ;
+				}
+			}
+		}
+		
+		function subtractProduct() //buys a product from stock
+		{
+			s = document.querySelector("#text1").value;
+			for (let c = 0; c < products.length; c++)
+			{
+				if (s == products[c])
+				{
+					if (inventory[c] == 0)
+					{
+						document.querySelector("#output").innerHTML = "There are no product in stocks";
+						return;
+					}
+					inventory[c]--;
+					document.querySelector("#output").innerHTML = "You buy the product, there are now " + inventory[c] + " " + products[c] + "s in stock";
+					return;
+				}
+				else
+				{
+					document.querySelector("#output").innerHTML = "That product does not exist" ;
+				}
+			}
+		}
+		
+	
+	</script>
+	
+</head>
+
+<body>
+	<h1>WDV221 Intro JS</h1>
+	<h2>Product Inventory</h2>
+	
+	<p>Enter the name of the product. Pen, paper, or penicl.</p>
+	<input type = "text" name = "text1" id = "text1"><br>
+	<input type = "button" name = "btn1" value = "Add" onClick="addProduct()">
+	<input type = "button" name = "btn2" value = "Subtract" onClick="subtractProduct()">
+	<p id = "output"></p>
+</body>
+</html>

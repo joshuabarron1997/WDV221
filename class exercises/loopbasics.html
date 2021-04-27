@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Untitled Document</title>
+	
+	<script>
+	
+		for (let int = 0; int < 3; int++)
+		{
+			//alert("hello");
+		}
+	
+		function numbers(value1)
+		{
+			num1 = parseInt(value1);
+			var string1 = "";
+			var i = num1;
+			for (let counter = num1; counter > 0; counter--)
+			{
+				string1 = string1 + i + " ";
+				i--;
+			}
+			document.getElementById("str").innerHTML = string1;
+		}
+	</script>
+</head>
+
+<body>
+	<h1>WDV 221</h1>
+	<input type = "text" id = "text1">
+	<input type = "button" value = "Button" onClick = "numbers(document.getElementById('text1').value)">
+	<p id = "str"></p>
+</body>
+</html>

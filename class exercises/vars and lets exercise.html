@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+	
+
+	<meta charset="utf-8">
+
+
+	<title>exercise3</title>
+
+	<script>
+	
+		var firstName; //defines a new variable with global scope
+		
+		var firstName = "Josh"; //assigning a value to the variable
+		
+		lastName = "Barron"; //this will be assigned to a var to prevent breaking
+		
+		alert(firstName); //display the value of the variable
+		
+		alert(firstName + (" ") + lastName);
+		
+	</script>
+	
+	<script>
+	
+		let counter; // defines a variable with global scope
+		
+		counter = 20; //loads a value
+		
+		alert("The value of counter is " + counter);
+	
+	</script>
+	
+	<script>
+		
+		const COURSENUMBER = "WDV221"; //create a constant global variable
+		
+		// COURSENUMBER = "Intro Javascript"; throws an error, constants can not be changed
+		
+		alert(COURSENUMBER);
+	
+	</script>
+	
+	<script>
+	
+		let totalAmt = -456.097;
+		
+		alert(totalAmt);
+		
+		{
+			let insideName = "Block";
+			alert("Inside Name: " + insideName);
+			
+			var outsideName = "Scope";
+			alert("Outside Name: " + outsideName);
+		}
+		alert("Outside Name: " + outsideName);
+		
+		//alert("Inside Name: " + insideName); this will throw an error because the let is defiend within the block
+
+	</script>
+	
+</head>
+
+<body>
+	
+	<!-- --> 
+	
+</body>
+</html>

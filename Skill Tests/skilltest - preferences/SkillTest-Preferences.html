@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV221 Intro Javascript - Skill Test Preferences</title>
+<style>
+
+	#container {
+		width:1028px;
+		margin:auto;
+	}
+	
+	ul	{
+		list-style:none;	
+	}
+</style>
+
+<script src = "javascript.js"></script>
+
+</head>
+
+<body>
+
+<div id="container">
+
+	<header>
+   		<h1>WDV221 Intro Javascript</h1>
+    	<h2>Skill Test - Setting Preferences</h2>
+    </header>
+    
+
+    <section>
+    	<h3>Instructions: Change background colors:</h3>
+        <ol>
+          <li>Modify the page as needed to change the background color when a different color is selected.</li>
+          <li>Use the changeColor( ) function to change the background color when a button is selected.</li>
+        </ol>
+    
+        <ul>Choose your background color:
+			<div>
+				<li>
+					<input type="radio" name="radioColor" id="radio" value="red">
+					<label for="radio">Red</label>
+				</li>
+				<li>
+					<input type="radio" name="radioColor" id="radio2" value="green">
+					<label for="radio2">Green </label>
+				</li>
+				<li>
+					<input type="radio" name="radioColor" id="radio3" value="blue">
+					<label for="radio3">Blue</label>
+				</li>
+			</div>
+        </ul>
+ 	</section>
+
+	<section>
+    	<h3>Instructions: Change font selection:</h3>    
+        <ol>
+          <li>Create an array called pageFonts that contains at least three fonts.</li>
+          <li>Use javascript to populate a drop down list of available fonts.</li>
+          <li>Create a function that will allow the user to select the font of their choice. Once selected, all text on the page will change to the selected font.    </li>
+        </ol> 
+        <p>
+          Choose your font:
+			<select name="selectFont" id="selectFont" onChange="changeFont(this.value)">
+    			<option>Please select font</option>
+   			</select>
+        </p>
+    </section>
+
+</div>
+</body>
+</html>

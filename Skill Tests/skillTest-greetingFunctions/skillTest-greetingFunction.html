@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>WDV221 Intro Javascript</title>
+    <style>
+        #container
+		{
+            width:1028px;
+            margin:auto;
+            background-color:#3CF;
+		}
+		footer 
+		{
+			text-align: center;
+		}
+    </style>
+	
+	<script src ="js/greeting.js"></script>
+	<script src = "js/todaysDate.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', init, false); //I for this entire time have never had onload in the body work correctly.
+		function init()
+		{
+			greeting();
+			document.querySelector("footer").innerHTML = "<p>Copyright &copy; " + todaysDate.getFullYear() + "</p>";
+		}
+	</script>
+
+</head>
+
+<body>
+
+<div id="container">
+
+	<header>
+    	<h1>WDV221 Intro Javascript</h1>
+    	<h2>Skill Test - Implement Functions</h2>
+    </header>
+    
+    <main>
+        <div id="greeting"></div>
+        
+        <h2>Today is: <strong><script>date();</script></strong></h2>
+        
+        <h3>Instructions:</h3>
+            <ol>
+              <li>Implement the greeting( ) 
+                <ul>
+                  <li>Implement the greeting( ) function on this page using an external link to the provided file. </li>
+                  <li>Use an onload event handler on the body element to run the script as soon as the page is loaded.</li>
+                  <li>The output from the function should display in the div element with an id='greeting' class.</li>
+                </ul>
+              </li>
+              <li>Display today's date in the following format: <strong>Sunday June 17, 2015</strong>
+                <ul>
+                  <li>Use the date functions provided earlier this semester to help your format the output.</li>
+                  <li>Attach these as an external javascript file.</li>
+                </ul>
+              </li>
+              <li>Implement a Copyright statement on the page.
+                <ul>
+                  <li>Format a Copyright statement on this page using the appropriate symbol.</li>
+                  <li>Use Javascript to ensure that the year will always be the current year.</li>
+                </ul>
+              </li>
+            </ol>
+	</main>
+    
+    <footer>
+        
+    </footer>
+
+</div>
+
+</body>
+</html>
